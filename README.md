@@ -2,6 +2,8 @@
 
 This project aims to analyze the sentiment of news articles regarding the Bharat Jodo Yatra, an ambitious project by the Indian National Congress (INC) to regain popularity and prepare for the upcoming 2024 general elections. The objective is to determine if the yatra was successful in changing people's perspective towards the party or its leader, Rahul Gandhi.
 
+For a more detailed overview of the project, including the analysis results and insights, please visit the following link: [Bharat Jodo Yatra: What Media is Saying - A Sentiment Analysis Study](https://medium.com/@abhi.kumar0799/bharat-jodo-yatra-what-media-is-saying-a-sentiment-analysis-study-60c57b82a5e1)
+
 ## Approach
 
 The sentiment analysis is conducted using the VADER (Valence Aware Dictionary and sEntiment Reasoner) tool. The analysis is performed on two different subsets of data: one representing the sentiment before the yatra and the other during the yatra. News articles are chosen as the dataset for analysis due to the significant influence of news sources in shaping public opinion in India.
