@@ -1,30 +1,53 @@
-Context:
-The Bharat Jodo Yatra was a very ambitious project by the Indian National Congress to recover its lost popularity among people and prepare for the upcoming 2024 general elections.
+# Bharat Jodo Yatra Sentiment Analysis
 
-According to the Indian National Congress the yatra aimed to address rampant unemployment & inflation, the politics of hate and division and the over-centralization of our political system, but, deep down we know it was just a gamble to revive the INC.
+This project aims to analyze the sentiment of news articles regarding the Bharat Jodo Yatra, an ambitious project by the Indian National Congress (INC) to regain popularity and prepare for the upcoming 2024 general elections. The objective is to determine if the yatra was successful in changing people's perspective towards the party or its leader, Rahul Gandhi.
 
-Problem Statement:
-Find out if the yatra was really able to change people’s perspective towards the party or the party leader Rahul Gandhi.
+## Approach
 
-Approach:
-I will do sentiment analysis of my dataset using VADER. The analysis will be of two different data subsets to compare the sentiment before and during the yatra.
+The sentiment analysis is conducted using the VADER (Valence Aware Dictionary and sEntiment Reasoner) tool. The analysis is performed on two different subsets of data: one representing the sentiment before the yatra and the other during the yatra. News articles are chosen as the dataset for analysis due to the significant influence of news sources in shaping public opinion in India.
 
-I chose to go with news articles as my base dataset because twitter has limited the use of it’s API and snscrape wasn’t working with twitter. In India news sources influence people very much, so I’m going ahead with news articles.
+## Workflow
 
-Work flow:
-Extracting Text:
-I extracted the news article links using webscrape.io as I am using news articles for the analysis. There are various free news APIs but they do not provide the feature to extract news articles from one year ago without getting their paid plans, therefore I had only one option left.
+### Extracting Text
 
-I then used Beautifulsoup and resquests to extract all the text content from each link and stored all of it in a excel file.
+The news article links are extracted using webscrape.io since free news APIs do not provide access to articles from one year ago without paid plans. Beautiful Soup and requests libraries are used to extract the text content from each link, and the extracted content is stored in an Excel file.
 
-Pre-processing:
-I performed text preprocessing on a dataset of news articles. First, I loaded the dataset and then applied a series of text cleaning operations, such as removing punctuation, special characters, and email addresses, and converting all words to lowercase. I also removed stop words, which are common words like “the” and “and” that are unlikely to contribute to the meaning of the text. Finally, I saved the cleaned text to a new file for further analysis.
+### Pre-processing
 
-VADAR:
-I imported the necessary libraries and loaded a dataset of news articles in Excel format using Pandas. After dropping any missing values from the dataset, I created an instance of the SentimentIntensityAnalyzer class from the NLTK library to perform sentiment analysis on the news articles.
+Text preprocessing is performed on the dataset of news articles. The dataset is loaded and subjected to various text cleaning operations, including removing punctuation, special characters, and email addresses, as well as converting all words to lowercase. Stop words, such as common words like "the" and "and," are also removed. The cleaned text is saved in a new file for further analysis.
 
-Next, I defined a function called vader_sentiment_analysis that applies the VADER sentiment analysis algorithm to each row of the dataset. The function calculates the positive, negative, neutral, and compound sentiment scores for each row and adds them as new columns to the dataset.
+### VADER Sentiment Analysis
 
-I then applied the vader_sentiment_analysis function to the dataset using the apply method in Pandas, which applies a function to each row of the dataset. Finally, I saved the resulting dataset with the sentiment scores to a new Excel file for further analysis.
+The necessary libraries are imported, and the dataset of news articles in Excel format is loaded using Pandas. After dropping any missing values, the SentimentIntensityAnalyzer class from the NLTK library is utilized to perform sentiment analysis on the news articles.
 
+A function called `vader_sentiment_analysis` is defined, which applies the VADER sentiment analysis algorithm to each row of the dataset. The function calculates the positive, negative, neutral, and compound sentiment scores for each row and adds them as new columns to the dataset.
 
+The `vader_sentiment_analysis` function is then applied to the dataset using the apply method in Pandas, which applies the function to each row. Finally, the resulting dataset with the sentiment scores is saved in a new Excel file for further analysis.
+
+## Usage
+
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/your-username/bharat-jodo-yatra-sentiment-analysis.git
+   ```
+
+2. Install the required dependencies:
+
+   ```
+   pip install beautifulsoup4 requests pandas nltk
+   ```
+
+3. Prepare the dataset by extracting the news article text and performing pre-processing as described in the workflow section.
+
+4. Run the sentiment analysis using VADER by executing the relevant code with the prepared dataset.
+
+5. Analyze the sentiment scores obtained and draw conclusions regarding the impact of the Bharat Jodo Yatra on people's perspective towards the INC and Rahul Gandhi.
+
+## Contributing
+
+Contributions are welcome! If you have any suggestions or improvements for the sentiment analysis workflow, please feel free to submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
