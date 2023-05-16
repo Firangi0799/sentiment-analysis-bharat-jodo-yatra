@@ -29,7 +29,7 @@ The `vader_sentiment_analysis` function is then applied to the dataset using the
 1. Clone the repository:
 
    ```
-   git clone https://github.com/your-username/bharat-jodo-yatra-sentiment-analysis.git
+   git clone https://github.com/Firangi0799/sentiment-analysis-bharat-jodo-yatra.git
    ```
 
 2. Install the required dependencies:
